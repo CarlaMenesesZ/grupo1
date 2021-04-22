@@ -4,4 +4,77 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"/>
+    android:alwaysDrawnWithCache="false"
+    android:background="#1C1A1A"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/SignInEmail"
+        android:layout_width="350dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="30dp"
+        android:text="@string/sign_in_with_email"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:chipSurfaceColor="#CC0400"
+        app:layout_constraintBottom_toTopOf="@+id/SignInGoogle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/SignInFacebook"
+        android:layout_width="170dp"
+        android:layout_height="80dp"
+        android:background="#ECE8E8"
+        android:text="@string/facebook"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:chipSurfaceColor="#CC0400"
+        app:layout_constraintBottom_toBottomOf="@+id/SignInGoogle"
+        app:layout_constraintStart_toStartOf="@+id/SignInEmail" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/SignInGoogle"
+        android:layout_width="170dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="130dp"
+        android:text="@string/google"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        app:chipSurfaceColor="#CC0400"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/SignInEmail"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/SignInFacebook" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toTopOf="@+id/SignInEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/checkbox_off_background"
+        android:contentDescription="@string/todo" />
+
+    <CheckBox
+        android:id="@+id/checkBoxTermsConditions"
+        android:layout_width="399dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/by_continuing_you_agree_to_my_terms_and_contitions"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
