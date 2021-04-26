@@ -16,7 +16,7 @@
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/captura_de_pantalla_2021_04_26_075208" />
+        app:srcCompat="@drawable/logo_oficial" />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress"
@@ -70,4 +70,5 @@
         app:layout_constraintEnd_toStartOf="@+id/editTextTextEmailAddress"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@android:drawable/ic_dialog_email" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
