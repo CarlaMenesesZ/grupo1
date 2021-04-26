@@ -10,8 +10,8 @@
 
     <com.google.android.material.chip.Chip
         android:id="@+id/SignInEmail"
-        android:layout_width="350dp"
-        android:layout_height="90dp"
+        android:layout_width="320dp"
+        android:layout_height="83dp"
         android:layout_marginBottom="30dp"
         android:text="@string/sign_in_with_email"
         android:textAlignment="center"
@@ -20,13 +20,12 @@
         android:textStyle="bold"
         app:chipSurfaceColor="#CC0400"
         app:layout_constraintBottom_toTopOf="@+id/SignInGoogle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="@+id/imageView4" />
 
     <com.google.android.material.chip.Chip
         android:id="@+id/SignInFacebook"
-        android:layout_width="170dp"
+        android:layout_width="130dp"
         android:layout_height="80dp"
         android:background="#ECE8E8"
         android:text="@string/facebook"
@@ -40,7 +39,7 @@
 
     <com.google.android.material.chip.Chip
         android:id="@+id/SignInGoogle"
-        android:layout_width="170dp"
+        android:layout_width="130dp"
         android:layout_height="80dp"
         android:layout_marginStart="50dp"
         android:layout_marginBottom="130dp"
@@ -67,23 +66,26 @@
 
     <CheckBox
         android:id="@+id/checkBoxTermsConditions"
-        android:layout_width="399dp"
-        android:layout_height="43dp"
-        android:layout_marginBottom="32dp"
+        android:layout_width="351dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="64dp"
         android:text="@string/by_continuing_you_agree_to_my_terms_and_contitions"
         android:textColor="#FFFFFF"
-        android:textSize="16sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/SignInFacebook" />
 
-    <EditText
-        android:id="@+id/editTextNumberPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="numberPassword"
-        tools:layout_editor_absoluteX="96dp"
-        tools:layout_editor_absoluteY="19dp" />
+    <ProgressBar
+        android:id="@+id/progressBarRegistro"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="140dp"
+        android:layout_height="24dp"
+        android:scrollbarStyle="outsideInset"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/SignInEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
