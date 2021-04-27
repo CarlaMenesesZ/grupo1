@@ -3,8 +3,10 @@ package com.example.proyectobase
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_login.*
+import kotlinx.android.synthetic.main.activity_main.*
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,21 +17,28 @@ class LoginActivity : AppCompatActivity() {
                 Usuario("Pedro Picapiedra", "password"),
                 Usuario("Julia", "qwerty")
         )
-        buttonCreate.text= "Create"
-         val username = editTextTextEmailAddress.text.toString()
+        buttonCreate.setOnClickListener {
+
+
+
+            val username = editTextTextEmailAddress.text.toString()
         val password= editTextTextPassword.text.toString()
         for (user in validUsersList){
             if(user.username == username && user.password == password) {
-                val intent = Intent(this, MainMenuActivity::class.java)
-                intent.putExtra("username", username)
-                intent.putExtra("password", password)
-                intent.putExtra("user", user)
-                startActivity(intent)
-                break
-            } else {
-                Toast.makeText(this, "Login Incorrecto!", Toast.LENGTH_LONG).show()
+
+                    val intent = Intent(this, MainMenuActivity::class.java)
+                    intent.putExtra("username", username)
+                    intent.putExtra("password", password)
+                    intent.putExtra("user", user)
+                    startActivity(intent)
+                 break
+            }else {
+                Toast.makeText(this, "Login Incorrecto!", Toast.LENGTH_SHORT).show()
             }
+
         }}
+
+    }
         override fun onStart() {
             super.onStart()
             println("onStart MainActivity")

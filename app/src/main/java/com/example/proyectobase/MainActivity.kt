@@ -26,7 +26,9 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        SignInEmail.setOnCloseIconClickListener {
+        SignInEmail.setOnClickListener {
+            progressBarRegistro.visibility = View.VISIBLE
+            progressBarRegistro.scrollBarFadeDuration
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
