@@ -3,40 +3,37 @@ package com.example.proyectobase
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_login.*
-import kotlinx.android.synthetic.main.activity_main.*
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         val validUsersList = listOf(
-                Usuario("Juanchito", "12345"),
-                Usuario("Pedro Picapiedra", "password"),
-                Usuario("Julia", "qwerty")
+                Usuario("juanchito1246", "12345"),
+                Usuario("Pedropicapiedra", "password"),
+                Usuario( "juliaalvarez59", "qwerty")
         )
+        buttonCreate.text= "Create"
         buttonCreate.setOnClickListener {
 
-
-
             val username = editTextTextEmailAddress.text.toString()
-        val password= editTextTextPassword.text.toString()
-        for (user in validUsersList){
-            if(user.username == username && user.password == password) {
-
+            val password= editTextTextPassword.text.toString()
+            for (user in validUsersList){
+                if(user.username == username && user.password == password) {
                     val intent = Intent(this, MainMenuActivity::class.java)
                     intent.putExtra("username", username)
                     intent.putExtra("password", password)
                     intent.putExtra("user", user)
                     startActivity(intent)
-                 break
-            }else {
-                Toast.makeText(this, "Login Incorrecto!", Toast.LENGTH_SHORT).show()
+                    break
+                } else {
+                    Toast.makeText(this, "Login Incorrecto!", Toast.LENGTH_SHORT).show()
+                }
             }
+        }
 
-        }}
 
     }
         override fun onStart() {

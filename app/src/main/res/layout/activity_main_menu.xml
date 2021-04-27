@@ -21,24 +21,49 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
+        android:id="@+id/imageViewAvatar"
+        android:layout_width="55dp"
+        android:layout_height="50dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:rotationX="0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@drawable/avatar" />
 
     <TextView
         android:id="@+id/textViewBienvenida"
         android:layout_width="0dp"
-        android:layout_height="113dp"
-        android:layout_marginStart="16dp"
+        android:layout_height="80dp"
         android:layout_marginTop="32dp"
         android:text="Bienvenid@ ... :D"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewHome" />
+
+    <ImageButton
+        android:id="@+id/imageButtonAddListofTasks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:background="#CC0400"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chipOverview"
+        app:srcCompat="@drawable/icon_plus" />
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chipOverview"
+        android:layout_width="97dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:background="#E91E63"
+        android:text="Overview"
+        android:textAlignment="center"
+        app:chipSurfaceColor="#CC0400"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBienvenida" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
