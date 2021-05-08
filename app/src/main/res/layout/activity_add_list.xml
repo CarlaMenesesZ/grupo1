@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddList">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ConstraintLayoutTemporal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#201C1C"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButtonAddList"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:scaleType="center"
+            android:textAlignment="center"
+            app:backgroundTint="#615D5D"
+            app:fabSize="auto"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewBrackground"
+            app:layout_constraintHorizontal_bias="0.489"
+            app:layout_constraintStart_toStartOf="@+id/imageViewBrackground"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextListName"
+            app:srcCompat="@drawable/icon_plus" />
+
+        <ImageView
+            android:id="@+id/imageViewBrackground"
+            android:layout_width="195dp"
+            android:layout_height="146dp"
+            android:background="#3F51B5"
+            android:scaleType="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/cc0400_color" />
+
+        <EditText
+            android:id="@+id/editTextTextListName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textColor="#C3B4B4"
+            android:textColorHighlight="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewBrackground"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewBrackground"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/imageViewBrackground"
+            app:layout_constraintTop_toBottomOf="@+id/textViewLetsStart" />
+
+        <TextView
+            android:id="@+id/textViewLetsStart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Let's start creating your first list's name"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#C3B4B4"
+            android:textColorHighlight="#232020"
+            android:textColorHint="#2C1313"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewBrackground"
+            app:layout_constraintStart_toStartOf="@+id/imageViewBrackground"
+            app:layout_constraintTop_toTopOf="@+id/imageViewBrackground" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,13 +2,14 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="170dp"
+    android:layout_width="150dp"
     android:layout_height="130dp">
 
     <ImageView
         android:id="@+id/imageViewBackgroundItem"
         android:layout_width="140dp"
-        android:layout_height="95dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="10dp"
         android:scaleType="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,13 +21,35 @@
         android:id="@+id/textViewTitleItem"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
         android:text="Task's Title"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
+        android:textAlignment="viewStart"
+        android:textColor="#E8DEDE"
+        android:textSize="12sp"
         android:textStyle="normal|bold"
         app:layout_constraintBottom_toBottomOf="@+id/imageViewBackgroundItem"
-        app:layout_constraintEnd_toEndOf="@+id/imageViewBackgroundItem"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewState"
         app:layout_constraintStart_toStartOf="@+id/imageViewBackgroundItem"
-        app:layout_constraintTop_toTopOf="@+id/imageViewBackgroundItem" />
+        app:layout_constraintTop_toBottomOf="@+id/imageViewIcon" />
+
+    <ImageView
+        android:id="@+id/imageViewIcon"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/imageViewBackgroundItem"
+        app:layout_constraintTop_toTopOf="@+id/imageViewBackgroundItem"
+        app:srcCompat="@android:drawable/ic_lock_lock" />
+
+    <ImageView
+        android:id="@+id/imageViewState"
+        android:layout_width="25dp"
+        android:layout_height="45dp"
+        android:rotation="25"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewBackgroundItem"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewBackgroundItem"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
 </androidx.constraintlayout.widget.ConstraintLayout>

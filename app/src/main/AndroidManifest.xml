@@ -9,8 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoBase">
-        <activity android:name=".PerfilActivity"></activity>
-        <activity android:name=".CalendarioActivity" />
+        <activity android:name=".AddList"></activity>
         <activity android:name=".MainMenuActivity" />
         <activity
             android:name=".LoginActivity"

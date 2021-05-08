@@ -22,7 +22,7 @@ class LoginActivity : AppCompatActivity() {
             val password= editTextTextPassword.text.toString()
             for (user in validUsersList){
                 if(user.username == username && user.password == password) {
-                    val intent = Intent(this, MainMenuActivity::class.java)
+                    val intent = Intent(this, AddList::class.java)
                     intent.putExtra("username", username)
                     intent.putExtra("password", password)
                     intent.putExtra("user", user)
