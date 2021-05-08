@@ -11,9 +11,9 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         val validUsersList = listOf(
-                Usuario("juanchito1246", "12345"),
-                Usuario("Pedropicapiedra", "password"),
-                Usuario( "juliaalvarez59", "qwerty")
+                Usuario("juanchito1246", "12345","juanchito@gmail.com"),
+                Usuario("Pedropicapiedra", "password", "Pedropicapiedra@gmail.com"),
+                Usuario( "juliaalvarez59", "qwerty","juliaalvarez@gmail.com")
         )
         buttonCreate.text= "Create"
         buttonCreate.setOnClickListener {
