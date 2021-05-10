@@ -1,11 +1,9 @@
 package com.example.proyectobase
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_main_menu.*
 
@@ -29,7 +27,7 @@ class MainMenuActivity : AppCompatActivity() {
 
         adapter.setOnTaskItemListener { task ->
             val intent = Intent(this, DetailsTaskActivity::class.java)
-            intent.putExtra("task", Gson().toJson(task))
+           intent.putExtra("task", Gson().toJson(task))
             startActivity(intent)
         }
         RecyclerViewTasks.adapter = adapter
@@ -39,17 +37,21 @@ class MainMenuActivity : AppCompatActivity() {
             val intent = Intent(this,AddTaskActivity::class.java)
             startActivity(intent)
         }
-
         imageViewAvatar.setOnClickListener {
-            val intent = Intent(this, PerfilActivity::class.java)
+            val intent = Intent(this,PerfilActivity::class.java)
             startActivity(intent)
         }
+        chipCalendario.setOnClickListener {
+            val intent= Intent(this,CalendarioActivity2::class.java)
+            startActivity(intent)
+        }
+
+
     }
 
     override fun onRestart() {
         super.onRestart()
         println("onRestart Activity")
-
         adapter.notifyDataSetChanged()
     }
 

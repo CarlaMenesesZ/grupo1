@@ -9,6 +9,18 @@
     android:textAlignment="center"
     tools:context=".MainMenuActivity">
 
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chipCalendario"
+        android:layout_width="97dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="192dp"
+        android:background="#E91E63"
+        android:text="Calendario"
+        android:textAlignment="center"
+        app:chipSurfaceColor="#CC0400"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBienvenida" />
+
     <TextView
         android:id="@+id/textViewHome"
         android:layout_width="74dp"

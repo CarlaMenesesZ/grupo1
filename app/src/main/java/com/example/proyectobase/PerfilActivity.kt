@@ -5,27 +5,24 @@ import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.Intent
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
-import kotlinx.android.synthetic.main.activity_main_menu.*
 import kotlinx.android.synthetic.main.activity_perfil.*
-import java.lang.Math.floor
 
 class PerfilActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_perfil)
-
-        val usernameRecibido = intent.getStringExtra("username")
-        val correonameRecibido = intent.getStringExtra("correo")
+        // val usernameRecibido = intent.getStringExtra("username")
+        // val correonameRecibido = intent.getStringExtra("correo")
 
         //val user = intent.getSerializableExtra("user") as Usuario
         textViewNombrePerfil.text = "Carla Meneses"//(user.username)
-       // val correo= intent.getSerializableExtra("correo") as Usuario
+        // val correo= intent.getSerializableExtra("correo") as Usuario
 
-       textViewCorreo.text= "Correoelectronico@gamil.com"//correo.correo
+        textViewCorreo.text= "Correoelectronico@gamil.com"//correo.correo
 
         switchNotificacion.setOnClickListener {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -51,7 +48,7 @@ class PerfilActivity : AppCompatActivity() {
 
 
             with(NotificationManagerCompat.from(this)) {
-                notify(floor(Math.random()*1000).toInt(), builder.build())
+                notify(Math.floor(Math.random() * 1000).toInt(), builder.build())
             }
 
         }
