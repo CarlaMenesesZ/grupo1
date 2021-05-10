@@ -1,5 +1,6 @@
 package com.example.proyectobase
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.gson.Gson
@@ -16,8 +17,15 @@ class DetailsTaskActivity : AppCompatActivity() {
         textViewDescription.text = task.description
         textViewState.text = task.state
         imageViewIconDetail.setImageResource(task.icon)
-        floatingActionButtonDeleteTask.setOnClickListener {
 
+        floatingActionButtonDeleteTask.setOnClickListener {
+        TemporalStorage.taskList.remove(task)
+            finish()
+        }
+        floatingActionButtonEditeTask.setOnClickListener {
+            val intent = Intent(this, AddTaskActivity::class.java)
+
+            startActivity(intent)
         }
     }
 }
