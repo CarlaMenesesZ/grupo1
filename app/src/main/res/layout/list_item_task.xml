@@ -50,6 +50,8 @@
         android:id="@+id/imageViewIcon"
         android:layout_width="25dp"
         android:layout_height="25dp"
+        android:background="#CC0400"
+        android:tint="#0C0C0C"
         app:layout_constraintStart_toStartOf="@+id/imageViewBackgroundItem"
         app:layout_constraintTop_toTopOf="@+id/imageViewBackgroundItem"
         app:srcCompat="@android:drawable/ic_lock_lock" />

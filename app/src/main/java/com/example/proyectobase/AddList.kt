@@ -11,8 +11,6 @@ class AddList : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_list)
 
-        //Glide.with(this).load(R.drawable.cc0400_color).circleCrop().into(imageViewBrackground)
-
         floatingActionButtonAddList.setOnClickListener{
 
             var ListTitle = editTextTextListName.text.toString()
@@ -20,10 +18,7 @@ class AddList : AppCompatActivity() {
             val intent = Intent(this, MainMenuActivity::class.java)
             intent.putExtra("listTitle", ListTitle)
             startActivity(intent)
-            //intent.putExtra("username", username)
-            //intent.putExtra("password", password)
-            //intent.putExtra("user", user)
-            //startActivity(intent)
+
         }
     }
 }

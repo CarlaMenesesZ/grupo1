@@ -46,8 +46,6 @@ class PerfilActivity : AppCompatActivity() {
                 .setSmallIcon(R.drawable.icon_plus)
                 .setContentTitle("Tienes una tarea pendiente!")
                 .setContentText("Investigacion de Progra 3 .......")
-//                .setStyle(NotificationCompat.BigTextStyle()
-//                    .bigText("Much longer text that cannot fit one line..."))
                 .setContentIntent(pendingIntent)
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
 

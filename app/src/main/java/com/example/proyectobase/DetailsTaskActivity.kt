@@ -16,5 +16,8 @@ class DetailsTaskActivity : AppCompatActivity() {
         textViewDescription.text = task.description
         textViewState.text = task.state
         imageViewIconDetail.setImageResource(task.icon)
+        floatingActionButtonDeleteTask.setOnClickListener {
+
+        }
     }
 }

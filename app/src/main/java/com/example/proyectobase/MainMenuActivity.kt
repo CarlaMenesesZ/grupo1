@@ -1,20 +1,17 @@
 package com.example.proyectobase
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_main_menu.*
 
 class MainMenuActivity : AppCompatActivity() {
 
-    val taskWelcome = TasK("Instalar Gestiork", "termina la instalacion de Gestiork para comenzar a organizar tu día", "done",  R.drawable.icon_elephant )
-    val taskIntro = TasK("Familiarizarte con la app :D", "Ve a curiosear por las distintas pantallas que Gestiork ofrece", "undone", R.drawable.icon_elephant )
-    val proyectoFinal = TasK("Final de Progra III", "Preparate para la expo y rompela con todo", "doing", R.drawable.icon_elephant )
-
-
-    var TasksList = mutableListOf<TasK>(taskWelcome, taskIntro, proyectoFinal)
+    val adapter = TaskListRecyclerViewAdapter(TemporalStorage.taskList)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,12 +27,51 @@ class MainMenuActivity : AppCompatActivity() {
 
 
 
-        val adapter = TaskListRecyclerViewAdapter(TasksList)
+        adapter.setOnTaskItemListener { task ->
+            val intent = Intent(this, DetailsTaskActivity::class.java)
+            intent.putExtra("task", Gson().toJson(task))
+            startActivity(intent)
+        }
         RecyclerViewTasks.adapter = adapter
-        RecyclerViewTasks.layoutManager = GridLayoutManager(this,2, GridLayoutManager.VERTICAL,false)
+        RecyclerViewTasks.layoutManager = GridLayoutManager(this,2, GridLayoutManager.HORIZONTAL,false)
 
+        floatingActionButtonAddTask.setOnClickListener {
+            val intent = Intent(this,AddTaskActivity::class.java)
+            startActivity(intent)
+        }
 
+        imageViewAvatar.setOnClickListener {
+            val intent = Intent(this, PerfilActivity::class.java)
+            startActivity(intent)
+        }
+    }
 
+    override fun onRestart() {
+        super.onRestart()
+        println("onRestart Activity")
 
+        adapter.notifyDataSetChanged()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        println("onResume Activity")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        println("onStop Activity")
+
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        println("onDestroy Activity")
+
+    }
+
+    override fun onPause() {
+        super.onPause()
+        println("onPause Activity")
     }
 }

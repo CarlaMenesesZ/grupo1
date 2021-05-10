@@ -59,13 +59,13 @@ class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
                 .transform(RoundedCorners(radius)).into(itemView.findViewById<ImageView>(R.id.imageViewBackgroundItem))
         itemView.findViewById<ImageView>(R.id.imageViewIcon).setImageResource((task.icon))
         //itemView.findViewById<ImageView>(R.id.imageViewState).setImageResource((task.state))
-        if(task.state == "undone"){
+        if(task.state == "Undone"){
             itemView.findViewById<ImageView>(R.id.imageViewState).setImageResource(R.drawable.icon_exclamation)
         }
-        else if(task.state == "doing"){
+        else if(task.state == "Doing"){
             itemView.findViewById<ImageView>(R.id.imageViewState).setImageResource(R.drawable.icon_hand)
         }
-        else if(task.state == "done"){
+        else if(task.state == "Done"){
             itemView.findViewById<ImageView>(R.id.imageViewState).setImageResource(R.drawable.icon_like)
         }
     }
