@@ -2,19 +2,32 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="150dp"
+    android:layout_width="170dp"
     android:layout_height="130dp">
 
-    <ImageView
-        android:id="@+id/imageViewBackgroundItem"
-        android:layout_width="140dp"
-        android:layout_height="90dp"
-        android:layout_marginBottom="10dp"
-        android:scaleType="center"
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="145dp"
+        android:layout_height="105dp"
+        android:background="@drawable/task_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageViewBackgroundItem"
+        android:layout_width="130dp"
+        android:layout_height="90dp"
+        android:background="#FFFFFF"
+        android:scaleType="center"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout"
         app:srcCompat="@drawable/cc0400_color" />
 
     <TextView
@@ -26,7 +39,7 @@
         android:text="Task's Title"
         android:textAlignment="viewStart"
         android:textColor="#E8DEDE"
-        android:textSize="12sp"
+        android:textSize="14sp"
         android:textStyle="normal|bold"
         app:layout_constraintBottom_toBottomOf="@+id/imageViewBackgroundItem"
         app:layout_constraintEnd_toStartOf="@+id/imageViewState"
@@ -37,19 +50,18 @@
         android:id="@+id/imageViewIcon"
         android:layout_width="25dp"
         android:layout_height="25dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="@+id/imageViewBackgroundItem"
         app:layout_constraintTop_toTopOf="@+id/imageViewBackgroundItem"
         app:srcCompat="@android:drawable/ic_lock_lock" />
 
     <ImageView
         android:id="@+id/imageViewState"
-        android:layout_width="25dp"
-        android:layout_height="45dp"
+        android:layout_width="35dp"
+        android:layout_height="55dp"
         android:rotation="25"
         android:scaleType="centerInside"
-        app:layout_constraintBottom_toBottomOf="@+id/imageViewBackgroundItem"
-        app:layout_constraintEnd_toEndOf="@+id/imageViewBackgroundItem"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout"
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

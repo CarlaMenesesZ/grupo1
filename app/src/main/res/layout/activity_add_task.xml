@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1C1A1A"
+    tools:context=".AddTaskActivity">
+
+    <ImageButton
+        android:id="@+id/imageButtonTitle4"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:tint="#CC0400"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewIcon_"
+        app:srcCompat="@drawable/cc0400_color" />
+
+    <ImageButton
+        android:id="@+id/imageButtonTitle6"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:tint="#CC0400"
+        app:layout_constraintBottom_toBottomOf="@+id/textView6"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toTopOf="@+id/textView6"
+        app:srcCompat="@drawable/cc0400_color" />
+
+    <ImageButton
+        android:id="@+id/imageButtonTitle5"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:tint="#CC0400"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:srcCompat="@drawable/cc0400_color" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:background="#CCCC0400"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextTitle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#D6C9C9"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonTitle4"
+        app:layout_constraintEnd_toEndOf="@+id/imageButtonTitle4"
+        app:layout_constraintStart_toStartOf="@+id/imageButtonTitle4"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonTitle4" />
+
+    <EditText
+        android:id="@+id/editTextTextDescription"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#D6C9C9"
+        android:textColorHint="#D6C9C9"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonTitle5"
+        app:layout_constraintEnd_toEndOf="@+id/imageButtonTitle5"
+        app:layout_constraintStart_toStartOf="@+id/imageButtonTitle5"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonTitle5" />
+
+    <ImageView
+        android:id="@+id/imageViewIcon_"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:srcCompat="@drawable/icon_elephant" />
+
+    <EditText
+        android:id="@+id/editTextTextState"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#D6C9C9"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonTitle6"
+        app:layout_constraintEnd_toEndOf="@+id/imageButtonTitle6"
+        app:layout_constraintStart_toStartOf="@+id/imageButtonTitle6"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonTitle6" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButtonAdd_Task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:backgroundTint="#CC0400"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextDescription"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/icon_plus" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Title:"
+        android:textAlignment="center"
+        android:textColor="#1C1A1A"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextTextTitle"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/editTextTextTitle" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="State:"
+        android:textAlignment="center"
+        android:textColor="#1C1A1A"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonTitle5" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Description:"
+        android:textAlignment="center"
+        android:textColor="#1C1A1A"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextTitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

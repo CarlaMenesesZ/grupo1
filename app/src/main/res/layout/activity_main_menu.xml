@@ -83,8 +83,8 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButtonAddTask"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_marginStart="8dp"
         android:adjustViewBounds="false"
         android:clickable="true"
@@ -96,6 +96,6 @@
         app:layout_constraintBottom_toBottomOf="@+id/textViewListName"
         app:layout_constraintStart_toEndOf="@+id/textViewListName"
         app:layout_constraintTop_toTopOf="@+id/textViewListName"
-        app:srcCompat="@drawable/icon_plus" />
+        app:srcCompat="@color/purple_700" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

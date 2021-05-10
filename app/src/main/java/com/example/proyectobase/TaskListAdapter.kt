@@ -3,6 +3,7 @@ package com.example.proyectobase
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ExpandableListView
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.view.menu.ActionMenuItemView
@@ -13,6 +14,8 @@ import java.util.zip.Inflater
 
 class TaskListRecyclerViewAdapter(var TasksList: MutableList<TasK>): RecyclerView.Adapter<ViewHolder>() {
 
+    var clickListener: ((task: TasK) -> Unit)? = null
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         val itemView = inflater.inflate(R.layout.list_item_task, parent, false)
@@ -22,11 +25,19 @@ class TaskListRecyclerViewAdapter(var TasksList: MutableList<TasK>): RecyclerVie
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(TasksList.get(position))
+        holder.itemView.setOnClickListener{
+            clickListener?.invoke(TasksList.get(position))
+        }
 
     }
 
     override fun getItemCount(): Int {
         return TasksList.size
+    }
+
+    fun setOnTaskItemListener(taskclickListener: (task: TasK ) -> Unit){
+        clickListener = taskclickListener
+
     }
 
     fun addProduct(task: TasK){
@@ -41,8 +52,6 @@ class TaskListRecyclerViewAdapter(var TasksList: MutableList<TasK>): RecyclerVie
 class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
     fun bind(task: TasK){
         itemView.findViewById<TextView>(R.id.textViewTitleItem).text = task.title
-        //itemView.findViewById<ImageView>(R.id.imageViewBackgroundItem).setImageResource(task.background)
-
         val radius = (itemView.context).resources.getDimensionPixelSize(R.dimen.corner_radius)
 
         Glide.with(itemView.context)

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1C1A1A"
+    tools:context=".DetailsTaskActivity">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:background="#CCCC0400"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextDate2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonDate"
+        app:layout_constraintEnd_toEndOf="@+id/imageButtonDate"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageButtonDate"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonDate"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/imageButtonDate2"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="56dp"
+        android:tint="#CC0400"
+        app:layout_constraintEnd_toEndOf="@+id/imageButtonDescription"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textViewDate"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonDescription"
+        app:srcCompat="@drawable/cc0400_color" />
+
+    <TextView
+        android:id="@+id/textViewDate2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:text="Time:"
+        android:textAlignment="textStart"
+        android:textColor="#1C1A1A"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonDate2"
+        app:layout_constraintEnd_toEndOf="@+id/textViewDate"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonDate2" />
+
+    <ImageButton
+        android:id="@+id/imageButtonDescription"
+        android:layout_width="0dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="8dp"
+        android:tint="#CC0400"
+        app:layout_constraintEnd_toEndOf="@+id/imageButtonTitle"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageButtonTitle"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:srcCompat="@drawable/cc0400_color" />
+
+    <ImageButton
+        android:id="@+id/imageButtonTitle"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:tint="#CC0400"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:srcCompat="@drawable/cc0400_color" />
+
+    <ImageButton
+        android:id="@+id/imageButtonDate"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:tint="#CC0400"
+        app:layout_constraintEnd_toEndOf="@+id/imageButtonDescription"
+        app:layout_constraintStart_toEndOf="@+id/textViewDate"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonDescription"
+        app:srcCompat="@drawable/cc0400_color" />
+
+    <ImageButton
+        android:id="@+id/imageButtonState"
+        android:layout_width="164dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:tint="#CC0400"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonDate2"
+        app:srcCompat="@drawable/cc0400_color" />
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:textAlignment="textStart"
+        android:textColor="#D6C9C9"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonTitle"
+        app:layout_constraintEnd_toEndOf="@+id/imageButtonTitle"
+        app:layout_constraintStart_toStartOf="@+id/imageButtonTitle"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonTitle" />
+
+    <TextView
+        android:id="@+id/textViewDate"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:text="Date:"
+        android:textAlignment="textStart"
+        android:textColor="#1C1A1A"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonDate"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonDate"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textViewState"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:textAlignment="textStart"
+        android:textColor="#D6C9C9"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonState"
+        app:layout_constraintEnd_toEndOf="@+id/imageButtonState"
+        app:layout_constraintStart_toStartOf="@+id/imageButtonState"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonState" />
+
+    <TextView
+        android:id="@+id/textViewDescription"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:textAlignment="textStart"
+        android:textColor="#D6C9C9"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonDescription"
+        app:layout_constraintEnd_toEndOf="@+id/imageButtonTitle"
+        app:layout_constraintStart_toStartOf="@+id/imageButtonDescription"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonDescription" />
+
+    <ImageView
+        android:id="@+id/imageViewIconDetail"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="@+id/textView3"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="State:"
+        android:textColor="#1C1A1A"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonState"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonState" />
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonDate"
+        app:layout_constraintEnd_toEndOf="@+id/imageButtonDate"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageButtonDate"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonDate"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/editTextTime"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:inputType="time"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonDate2"
+        app:layout_constraintEnd_toEndOf="@+id/imageButtonDate2"
+        app:layout_constraintStart_toStartOf="@+id/imageButtonDate2"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonDate2" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Title:"
+        android:textColor="#1C1A1A"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewIconDetail" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Description:"
+        android:textColor="#1C1A1A"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonTitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
