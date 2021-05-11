@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoBase">
-        <activity android:name=".CalendarioActivity2"></activity>
+        <activity android:name=".NewUserActivity"></activity>
+        <activity android:name=".CalendarioActivity2" />
         <activity android:name=".PerfilActivity" />
         <activity android:name=".DetailsTaskActivity" />
         <activity android:name=".AddTaskActivity" />
@@ -26,6 +27,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.proyectobase"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
     </application>
 
 </manifest>

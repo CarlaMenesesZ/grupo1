@@ -17,11 +17,12 @@ class MainMenuActivity : AppCompatActivity() {
 
 
         val listTitle = intent.getStringExtra("listTitle")
+        val user= TemporalStorage.usuario!!
 
 
         textViewListName.text = listTitle
 
-        textViewBienvenida.text = "Welcome :D"
+        textViewBienvenida.text = "Welcome "+ user.username+ " :D"
 
 
 

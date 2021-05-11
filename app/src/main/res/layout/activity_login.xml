@@ -93,7 +93,6 @@
         app:srcCompat="@android:drawable/ic_dialog_email" />
 
     <TextView
-        android:id="@+id/textForgotPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
@@ -102,4 +101,16 @@
         app:layout_constraintBottom_toTopOf="@+id/buttonCreate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonRegistroNuevo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eres nuevo? Registrate"
+        android:textColorLink="#A32525"
+        app:backgroundTint="#372F2F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCreate" />
 </androidx.constraintlayout.widget.ConstraintLayout>

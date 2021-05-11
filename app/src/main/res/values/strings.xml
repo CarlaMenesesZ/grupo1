@@ -1,10 +1,7 @@
 <resources>
     <string name="app_name">proyectoBase</string>
-    <string name="mensaje_de_bienvenida">Mensaje de Bienvenida</string>
-    <string name="home">Home</string>
     <string name="facebook">Facebook</string>
     <string name="sign_in_with_email">Sign in with Email</string>
-    <string name="apple_id">Apple ID</string>
     <string name="todo">TODO</string>
     <string name="by_continuing_you_agree_to_my_terms_and_contitions">By continuing you agree to my terms and contitions</string>
     <string name="google">Google</string>

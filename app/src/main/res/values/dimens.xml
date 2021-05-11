@@ -1,4 +1,3 @@
 <resources>
-    <dimen name="fab_margin">16dp</dimen>
     <dimen name="corner_radius">1dp</dimen>
 </resources>

@@ -4,25 +4,32 @@ import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.Intent
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.os.Environment
+import android.provider.MediaStore
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
+import androidx.core.content.FileProvider
 import kotlinx.android.synthetic.main.activity_perfil.*
+import java.io.File
 
 class PerfilActivity : AppCompatActivity() {
+    val requestCodeGallery = 123
+    val requestCodeCamera = 456
+    var fileUri: Uri?= null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_perfil)
-        // val usernameRecibido = intent.getStringExtra("username")
-        // val correonameRecibido = intent.getStringExtra("correo")
+        val user= TemporalStorage.usuario!!
+        val correo = TemporalStorage.usuario!!
 
-        //val user = intent.getSerializableExtra("user") as Usuario
-        textViewNombrePerfil.text = "Carla Meneses"//(user.username)
-        // val correo= intent.getSerializableExtra("correo") as Usuario
 
-        textViewCorreo.text= "Correoelectronico@gamil.com"//correo.correo
+        textViewNombrePerfil.text = (user.username)
+
+        textViewCorreo.text= correo.correo
 
         switchNotificacion.setOnClickListener {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -52,9 +59,34 @@ class PerfilActivity : AppCompatActivity() {
             }
 
         }
+        imageViewCamara.setOnClickListener{
+            val file = File(getExternalFilesDir(Environment.DIRECTORY_PICTURES),"imageCamera" + System.currentTimeMillis() + ".jpg")
+        fileUri = FileProvider.getUriForFile(this, "com.example.proyectobase", file)
+
+        val intent = Intent()
+        intent.action = MediaStore.ACTION_IMAGE_CAPTURE
+        intent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri)
+        startActivityForResult(intent, requestCodeCamera)
+    }
+        imageViewGallery.setOnClickListener {
+            val intent = Intent()
+            intent.action = Intent.ACTION_PICK
+            intent.type = "image/*"
+            startActivityForResult(Intent.createChooser(intent, "Selecciona una imagen!"), requestCodeGallery)
+
+        }
 
 
 
+    }
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if(requestCode == requestCodeGallery) {
+            imageView5.setImageURI(data?.data)
+            fileUri = data?.data
+        } else if(requestCode == requestCodeCamera) {
+            imageView5.setImageURI(fileUri)
+        }
     }
 
     companion object {

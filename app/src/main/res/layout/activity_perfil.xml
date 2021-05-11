@@ -109,4 +109,24 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5"
         app:srcCompat="@drawable/avatar" />
 
+    <ImageView
+        android:id="@+id/imageViewCamara"
+        android:layout_width="56dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="170dp"
+        android:src="@drawable/camera_photos_photo_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewGallery"
+        android:layout_width="62dp"
+        android:layout_height="63dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewCamara"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewCamara"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageViewCamara"
+        app:srcCompat="@drawable/gallery_icon" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
