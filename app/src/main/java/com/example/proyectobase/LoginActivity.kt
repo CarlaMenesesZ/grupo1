@@ -12,11 +12,7 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-       /* val validUsersList = listOf(
-                Usuario("juanchito1246", "12345","juanchito@gmail.com"),
-                Usuario("Pedropicapiedra", "password", "Pedropicapiedra@gmail.com"),
-                Usuario( "juliaalvarez59", "qwerty","juliaalvarez@gmail.com")
-        )*/
+
         buttonCreate.text= "Login"
         buttonCreate.setOnClickListener {
 

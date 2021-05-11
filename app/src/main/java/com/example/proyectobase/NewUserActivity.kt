@@ -49,10 +49,10 @@ class NewUserActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if(requestCode == requestCodeGallery) {
-            imageView5.setImageURI(data?.data)
+            imageAvatarPerfil.setImageURI(data?.data)
             fileUri = data?.data
         } else if(requestCode == requestCodeCamera) {
-            imageView5.setImageURI(fileUri)
+            imageAvatarPerfil.setImageURI(fileUri)
         }
     }
 

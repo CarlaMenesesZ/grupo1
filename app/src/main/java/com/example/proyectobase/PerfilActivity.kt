@@ -30,6 +30,7 @@ class PerfilActivity : AppCompatActivity() {
         textViewNombrePerfil.text = (user.username)
 
         textViewCorreo.text= correo.correo
+        imageAvatarPerfil.setImageURI(user.imageUri!!)
 
         switchNotificacion.setOnClickListener {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -82,10 +83,10 @@ class PerfilActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if(requestCode == requestCodeGallery) {
-            imageView5.setImageURI(data?.data)
+            imageAvatarPerfil.setImageURI(data?.data)
             fileUri = data?.data
         } else if(requestCode == requestCodeCamera) {
-            imageView5.setImageURI(fileUri)
+            imageAvatarPerfil.setImageURI(fileUri)
         }
     }
 

@@ -23,6 +23,7 @@ class MainMenuActivity : AppCompatActivity() {
         textViewListName.text = listTitle
 
         textViewBienvenida.text = "Welcome "+ user.username+ " :D"
+        imageViewAvatar.setImageURI(user.imageUri!!)
 
 
 
