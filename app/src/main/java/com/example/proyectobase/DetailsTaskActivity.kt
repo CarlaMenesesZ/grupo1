@@ -17,6 +17,7 @@ class DetailsTaskActivity : AppCompatActivity() {
         textViewDescription.text = task.description
         textViewState.text = task.state
         imageViewIconDetail.setImageResource(task.icon)
+        //editTextDate.text = task.date.toString()
 
         floatingActionButtonDeleteTask.setOnClickListener {
         TemporalStorage.taskList.remove(task)
@@ -24,7 +25,6 @@ class DetailsTaskActivity : AppCompatActivity() {
         }
         floatingActionButtonEditeTask.setOnClickListener {
             val intent = Intent(this, AddTaskActivity::class.java)
-
             startActivity(intent)
         }
     }
