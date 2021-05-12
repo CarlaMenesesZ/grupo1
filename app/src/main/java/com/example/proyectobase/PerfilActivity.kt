@@ -29,8 +29,13 @@ class PerfilActivity : AppCompatActivity() {
 
         textViewNombrePerfil.text = (user.username)
 
+        textView7.setOnClickListener {
+            val intent = Intent(this, Configuraciones::class.java)
+            startActivity(intent)
+        }
+
         textViewCorreo.text= correo.correo
-        imageAvatarPerfil.setImageURI(user.imageUri!!)
+        //imageAvatarPerfil.setImageURI(user.imageUri!!)
 
         switchNotificacion.setOnClickListener {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -80,6 +85,7 @@ class PerfilActivity : AppCompatActivity() {
 
 
     }
+
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if(requestCode == requestCodeGallery) {

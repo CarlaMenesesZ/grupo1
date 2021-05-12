@@ -10,7 +10,7 @@ data class TasK(
     @Expose var state: String,
     @Expose var time: String,
     @Expose var date: String,
-    @Expose var icon: Int = R.drawable.icon_elephant, //Icono predeterminado
+    @Expose var icon: Int = R.drawable.icon_elephant,
     @Expose val background: Int = R.drawable.cc0400_color //Imagen predeterminada
 
 )

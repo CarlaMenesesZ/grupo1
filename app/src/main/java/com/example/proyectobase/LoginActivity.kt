@@ -22,7 +22,7 @@ class LoginActivity : AppCompatActivity() {
             for (validUser in validUsers) {
                 if(validUser.username == username && validUser.password == password) {
                     TemporalStorage.usuario = validUser
-                    val intent = Intent(this, MainMenuActivity::class.java)
+                    val intent = Intent(this, AddList::class.java)
                     intent.putExtra("username", username)
                     intent.putExtra("password", password)
                     startActivity(intent)

@@ -22,10 +22,7 @@ class MainMenuActivity : AppCompatActivity() {
 
         textViewListName.text = listTitle
 
-        textViewBienvenida.text = "Welcome "+ user.username+ " :D"
-        imageViewAvatar.setImageURI(user.imageUri!!)
-
-
+        textViewBienvenida.text = "Welcome :D"
 
         adapter.setOnTaskItemListener { task ->
             val intent = Intent(this, DetailsTaskActivity::class.java)
@@ -36,7 +33,7 @@ class MainMenuActivity : AppCompatActivity() {
         RecyclerViewTasks.layoutManager = GridLayoutManager(this,2, GridLayoutManager.HORIZONTAL,false)
 
         floatingActionButtonAddTask.setOnClickListener {
-            val intent = Intent(this,AddTaskActivity::class.java)
+            val intent = Intent(this, AddTaskActivity::class.java)
             startActivity(intent)
         }
         imageViewAvatar.setOnClickListener {

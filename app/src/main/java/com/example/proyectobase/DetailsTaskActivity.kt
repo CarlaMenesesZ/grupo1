@@ -13,19 +13,18 @@ class DetailsTaskActivity : AppCompatActivity() {
 
         val task = Gson().fromJson(intent.getStringExtra("task"), TasK::class.java)
 
-        textViewTitle.text = task.title
+        textViewtitle.text = task.title
         textViewDescription.text = task.description
         textViewState.text = task.state
         imageViewIconDetail.setImageResource(task.icon)
-        //editTextDate.text = task.date.toString()
+        textViewDate.text = task.date
+        textViewTime.text = task.time
+
 
         floatingActionButtonDeleteTask.setOnClickListener {
         TemporalStorage.taskList.remove(task)
             finish()
-        }
-        floatingActionButtonEditeTask.setOnClickListener {
-            val intent = Intent(this, AddTaskActivity::class.java)
-            startActivity(intent)
+
         }
     }
 }

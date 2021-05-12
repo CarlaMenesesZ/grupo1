@@ -20,6 +20,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <EditText
+        android:id="@+id/editText"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:ems="10"
@@ -43,7 +44,7 @@
         android:tint="#261C1A1A"
         app:layout_constraintEnd_toEndOf="@+id/constraintLayout2"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textViewDate"
+        app:layout_constraintStart_toEndOf="@+id/textViewDate_"
         app:layout_constraintTop_toBottomOf="@+id/imageButtonDescription" />
 
     <TextView
@@ -55,7 +56,7 @@
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/imageButtonTime"
-        app:layout_constraintEnd_toEndOf="@+id/textViewDate"
+        app:layout_constraintEnd_toEndOf="@+id/textViewDate_"
         app:layout_constraintTop_toTopOf="@+id/imageButtonTime" />
 
     <ImageButton
@@ -90,7 +91,7 @@
         android:layout_marginTop="16dp"
         android:tint="#261C1A1A"
         app:layout_constraintEnd_toEndOf="@+id/imageButtonDescription"
-        app:layout_constraintStart_toEndOf="@+id/textViewDate"
+        app:layout_constraintStart_toEndOf="@+id/textViewDate_"
         app:layout_constraintTop_toBottomOf="@+id/imageButtonDescription"
         app:srcCompat="@drawable/cc0400_color" />
 
@@ -106,21 +107,7 @@
         app:srcCompat="@drawable/cc0400_color" />
 
     <TextView
-        android:id="@+id/textViewTitle"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="textStart"
-        android:textColor="#D6C9C9"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButtonTitle"
-        app:layout_constraintEnd_toEndOf="@+id/imageButtonTitle"
-        app:layout_constraintStart_toStartOf="@+id/imageButtonTitle"
-        app:layout_constraintTop_toTopOf="@+id/imageButtonTitle" />
-
-    <TextView
-        android:id="@+id/textViewDate"
+        android:id="@+id/textViewDate_"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -133,6 +120,36 @@
         app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
         app:layout_constraintTop_toTopOf="@+id/imageButtonDate"
         app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textViewDate"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editText"
+        app:layout_constraintEnd_toEndOf="@+id/editText"
+        app:layout_constraintStart_toStartOf="@+id/editText"
+        app:layout_constraintTop_toTopOf="@+id/editText" />
+
+    <TextView
+        android:id="@+id/textViewTime"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonTime"
+        app:layout_constraintEnd_toEndOf="@+id/imageButtonTime"
+        app:layout_constraintStart_toStartOf="@+id/imageButtonTime"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonTime" />
+
+    <TextView
+        android:id="@+id/textViewtitle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonTitle"
+        app:layout_constraintEnd_toEndOf="@+id/imageButtonTitle"
+        app:layout_constraintStart_toStartOf="@+id/imageButtonTitle"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonTitle" />
 
     <TextView
         android:id="@+id/textViewState"
@@ -186,28 +203,6 @@
         app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
         app:layout_constraintTop_toTopOf="@+id/imageButtonState" />
 
-    <EditText
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:ems="10"
-        android:inputType="date"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButtonDate"
-        app:layout_constraintEnd_toEndOf="@+id/imageButtonDate"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/imageButtonDate"
-        app:layout_constraintTop_toTopOf="@+id/imageButtonDate"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <EditText
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:ems="10"
-        android:inputType="time"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButtonTime"
-        app:layout_constraintEnd_toEndOf="@+id/imageButtonTime"
-        app:layout_constraintStart_toStartOf="@+id/imageButtonTime"
-        app:layout_constraintTop_toTopOf="@+id/imageButtonTime" />
-
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
@@ -235,22 +230,12 @@
         app:layout_constraintTop_toBottomOf="@+id/imageButtonTitle" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="75dp"
-        android:clickable="true"
-        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout2"
-        app:layout_constraintEnd_toEndOf="@+id/constraintLayout2"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
-        app:srcCompat="@drawable/icon_edite" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButtonDeleteTask"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
         app:layout_constraintBottom_toBottomOf="@+id/constraintLayout2"
-        app:layout_constraintEnd_toStartOf="@+id/floatingActionButtonEditeTask"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLayout2"
         app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
         app:srcCompat="@drawable/icon_trash" />

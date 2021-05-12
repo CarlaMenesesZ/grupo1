@@ -7,6 +7,18 @@
     android:background="#1C1A1A"
     tools:context=".AddTaskActivity">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="334dp"
+        android:layout_height="450dp"
+        android:background="@drawable/task_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <ImageButton
         android:id="@+id/imageButtonTitle4"
         android:layout_width="0dp"
@@ -14,8 +26,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:tint="#CC0400"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
+        android:tint="#261C1A1A"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLayout3"
         app:layout_constraintStart_toEndOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/imageViewIcon_"
         app:srcCompat="@drawable/cc0400_color" />
@@ -25,7 +37,7 @@
         android:layout_width="150dp"
         android:layout_height="30dp"
         android:layout_marginStart="8dp"
-        android:tint="#CC0400"
+        android:tint="#261C1A1A"
         app:layout_constraintBottom_toBottomOf="@+id/textView6"
         app:layout_constraintStart_toEndOf="@+id/textView6"
         app:layout_constraintTop_toTopOf="@+id/textView6"
@@ -38,21 +50,11 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:tint="#CC0400"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="@+id/textView"
+        android:tint="#261C1A1A"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLayout3"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout3"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
         app:srcCompat="@drawable/cc0400_color" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="300dp"
-        android:layout_height="400dp"
-        android:background="#CCCC0400"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextTextTitle"
@@ -81,28 +83,27 @@
         app:layout_constraintStart_toStartOf="@+id/imageButtonTitle5"
         app:layout_constraintTop_toTopOf="@+id/imageButtonTitle5" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButtonAdd_Task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:backgroundTint="#E6CC0400"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout3"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLayout3"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3"
+        app:srcCompat="@drawable/icon_plus" />
+
     <ImageView
         android:id="@+id/imageViewIcon_"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout3"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout3"
         app:srcCompat="@drawable/icon_elephant" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButtonAdd_Task"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        app:backgroundTint="#CC0400"
-        app:layout_constraintBottom_toBottomOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextDescription"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:srcCompat="@drawable/icon_plus" />
 
     <TextView
         android:id="@+id/textView4"
@@ -114,7 +115,7 @@
         android:textColor="#1C1A1A"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/editTextTextTitle"
-        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout3"
         app:layout_constraintTop_toTopOf="@+id/editTextTextTitle" />
 
     <TextView
@@ -122,12 +123,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:text="State:"
         android:textAlignment="center"
         android:textColor="#1C1A1A"
         android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout3"
         app:layout_constraintTop_toBottomOf="@+id/imageButtonTitle5" />
 
     <TextView
@@ -135,34 +136,38 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:text="Description:"
         android:textAlignment="center"
         android:textColor="#1C1A1A"
         android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout3"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextTitle" />
 
     <EditText
         android:id="@+id/editTextTime2Time_"
-        android:layout_width="225dp"
+        android:layout_width="0dp"
         android:layout_height="37dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="time"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="@+id/imageButtonTitle6"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/imageButtonTitle6" />
 
     <EditText
         android:id="@+id/editTextDateDate_"
-        android:layout_width="219dp"
+        android:layout_width="0dp"
         android:layout_height="37dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="date"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTime2Time_"
+        app:layout_constraintStart_toEndOf="@+id/textView10"
         app:layout_constraintTop_toBottomOf="@+id/editTextTime2Time_" />
 
     <TextView
@@ -171,8 +176,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:text="Time"
+        android:textColor="#1C1A1A"
         app:layout_constraintBottom_toBottomOf="@+id/editTextTime2Time_"
-        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout3"
         app:layout_constraintTop_toTopOf="@+id/editTextTime2Time_" />
 
     <TextView
@@ -181,14 +187,17 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:text="Date"
+        android:textColor="#1C1A1A"
         app:layout_constraintBottom_toBottomOf="@+id/editTextDateDate_"
-        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout3"
         app:layout_constraintTop_toTopOf="@+id/editTextDateDate_" />
 
     <Spinner
         android:id="@+id/spinnerState"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:isScrollContainer="false"
+        android:spinnerMode="dialog"
         android:textAlignment="textEnd"
         app:layout_constraintBottom_toBottomOf="@+id/imageButtonTitle6"
         app:layout_constraintEnd_toEndOf="@+id/imageButtonTitle6"
