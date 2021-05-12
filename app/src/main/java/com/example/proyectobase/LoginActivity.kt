@@ -33,7 +33,7 @@ class LoginActivity : AppCompatActivity() {
             val intent= Intent(this, NewUserActivity::class.java)
             startActivity(intent)
         }
-//requestPermissions()
+
 
 
 
@@ -67,39 +67,5 @@ class LoginActivity : AppCompatActivity() {
             super.onRestart()
             println("onRestart MainActivity")
         }
-/*    override fun onRequestPermissionsResult(
-        requestCode: Int,
-        permissions: Array<out String>,
-        grantResults: IntArray
-    ) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        // Forward results to EasyPermissions
-        EasyPermissions.onRequestPermissionsResult(
-            requestCode,
-            permissions,
-            grantResults, this
-        )
-    }
-
-    @AfterPermissionGranted(requestCodePermissions)
-    fun requestPermissions() {
-        if (EasyPermissions.hasPermissions(this,
-                Manifest.permission.READ_EXTERNAL_STORAGE)) {
-            // Already have permission, do the thing
-            // ...
-        } else {
-            // Do not have permissions, request them now
-            EasyPermissions.requestPermissions(
-                this,
-                "Se requieren permisos para usar la aplicacion",
-                requestCodePermissions,
-                Manifest.permission.READ_EXTERNAL_STORAGE
-            )
-        }
-    }*/
-
-    companion object {
-        const val requestCodePermissions = 1234
-    }
 
 }

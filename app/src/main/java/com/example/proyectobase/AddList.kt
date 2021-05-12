@@ -1,9 +1,8 @@
 package com.example.proyectobase
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.bumptech.glide.Glide
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_add_list.*
 
 class AddList : AppCompatActivity() {

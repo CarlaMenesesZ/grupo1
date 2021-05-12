@@ -1,9 +1,8 @@
 package com.example.proyectobase
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.bumptech.glide.Glide
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -17,7 +16,7 @@ class MainActivity : AppCompatActivity() {
 
         SignInFacebook.setOnClickListener{
 
-            val intent = Intent(this, MainMenuActivity::class.java)
+            val intent = Intent(this, ConfiguracionesActivity2::class.java)
             startActivity(intent)
         }
 
@@ -31,8 +30,6 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
-
-
 
 
 

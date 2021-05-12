@@ -29,10 +29,8 @@ class PerfilActivity : AppCompatActivity() {
 
         textViewNombrePerfil.text = (user.username)
 
-        textView7.setOnClickListener {
-            val intent = Intent(this, Configuraciones::class.java)
-            startActivity(intent)
-        }
+
+
 
         textViewCorreo.text= correo.correo
         //imageAvatarPerfil.setImageURI(user.imageUri!!)
@@ -65,6 +63,10 @@ class PerfilActivity : AppCompatActivity() {
             }
 
         }
+        textViewConfiguraciones.setOnClickListener {
+            val intent = Intent(this, ConfiguracionesActivity2::class.java)
+            startActivity(intent)
+        }
         imageViewCamara.setOnClickListener{
             val file = File(getExternalFilesDir(Environment.DIRECTORY_PICTURES),"imageCamera" + System.currentTimeMillis() + ".jpg")
         fileUri = FileProvider.getUriForFile(this, "com.example.proyectobase", file)
@@ -80,6 +82,10 @@ class PerfilActivity : AppCompatActivity() {
             intent.type = "image/*"
             startActivityForResult(Intent.createChooser(intent, "Selecciona una imagen!"), requestCodeGallery)
 
+        }
+        textViewConfiguraciones.setOnClickListener {
+            val intent= Intent(this, ConfiguracionesActivity2::class.java)
+            startActivity(intent)
         }
 
 

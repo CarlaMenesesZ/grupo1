@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoBase">
-        <activity android:name=".NewUserActivity"></activity>
+        <activity android:name=".ContactanosActivity"></activity>
+        <activity android:name=".InformacionActivity" />
+        <activity android:name=".ConfiguracionesActivity2" />
+        <activity android:name=".NewUserActivity" />
         <activity android:name=".CalendarioActivity2" />
         <activity android:name=".PerfilActivity" />
         <activity android:name=".DetailsTaskActivity" />
